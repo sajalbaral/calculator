@@ -18,10 +18,18 @@ numberButtons.forEach((button) =>
     button.addEventListener('click', () => appendNumber(button.textContent))
 )
 
+operatorButtons.forEach((button) => 
+    button.addEventListener('click', () => appendOperator(button.textContent))
+)
+
 function appendNumber(number) {
     currentCalc.innerText += number;
 }
 
+function appendOperator(oper){
+    currentCalc.innerText += oper;
+}
+ 
 function clear() {
     firstNum = ''
     secondNum = ''
