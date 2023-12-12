@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Calculator</title>
 </head>
 <body>
     <div class="calculator">
         <div class="screen">
-            <div class="calculation">1 + 2 =</div>
-            <div class="result">3</div>
+            <div id="last-calc" class="last-calc"></div>
+            <div id="current-calc" class="current-calc"></div>
         </div>
         <div class="btn-grid">
             <button id="clear-btn" class="btn span-2">Clear</button>
@@ -27,6 +27,7 @@
             <button id="data-number" class="btn numbers">1</button>
             <button id="data-number" class="btn numbers">2</button>
             <button id="data-number" class="btn numbers">3</button>
+            <button id="data-operator" class="btn signs">-</button>
             <button id="point-btn" class="btn signs">.</button>
             <button id="data-number" class="btn numbers">0</button>
             <button id="equals-btn" class="btn signs">=</button>
