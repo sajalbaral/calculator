@@ -3,3 +3,26 @@
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
 }
+
+body {
+    padding: 5rem;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    align-items: center;
+    width: 400px;
+    height: 500px;
+    border-radius: 3%;
+    margin: auto;
+    padding: 20px;
+}
+
+.screen {
+    border: 2px solid black;
+    padding: 10px 20px;
+    width: 350px;
+    height: 150px;
+}
