@@ -32,11 +32,11 @@ body {
     text-align: end;
 }
 
-.last-calc {
+#last-calc {
     font-size: 25px;
 }
 
-.current-calc {
+#current-calc {
     font-size: 60px;
     margin-top: 25px;
 }
