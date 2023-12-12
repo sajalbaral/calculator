@@ -11,6 +11,9 @@ const equalsButton = document.getElementById('equals-btn');
 const lastCalc = document.getElementById('last-calc');
 const currentCalc = document.getElementById('current-calc');
 
+clearButton.addEventListener('click', clear);
+deleteButton.addEventListener('click', deleted);
+
 numberButtons.forEach((button) => 
     button.addEventListener('click', () => appendNumber(button.textContent))
 )
@@ -27,7 +30,13 @@ function clear() {
     lastCalc.textContent = ''
 }
 
-clearButton.addEventListener('click', clear)
+function deleted() {
+    currentCalc.textContent = 
+    currentCalc
+        .textContent
+        .toString()
+        .slice(0,-1);
+}
 
 function operate(a, b, operator) {
     a = Number(a);
