@@ -34,11 +34,15 @@ body {
 
 #last-calc {
     font-size: 25px;
+    height: 40px;
 }
 
 #current-calc {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 80px;
     font-size: 60px;
-    margin-top: 25px;
 }
 
 .btn-grid {
