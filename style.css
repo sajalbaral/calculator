@@ -1,23 +1,24 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: monospace;
 }
 
 body {
     padding: 5rem;
+    background-color: #FBEAEB;
 }
 
 .calculator {
     display: flex;
     flex-direction: column;
     border: 2px solid black;
-    align-items: center;
     width: 400px;
-    height: 500px;
-    border-radius: 3%;
+    height: 550px;
+    border-radius: 15px;
     margin: auto;
     padding: 20px;
+    background-color: #8AAAE5;
 }
 
 .screen {
@@ -25,4 +26,53 @@ body {
     padding: 10px 20px;
     width: 350px;
     height: 150px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #FBEAEB;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: #FBEAEB;
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+#clear-btn {
+    background-color: #8ae5cb;
+}
+
+#clear-btn:hover,
+#delete-btn:hover {
+    background-color: #FBEAEB;
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+#delete-btn {
+    background-color: rgb(229, 147, 147);
+}
+
+.signs:hover {
+    background-color: #908ae5;
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.numbers:hover {
+    background-color: #e58ac1;
+    transform: scale(1.2);
+    transition: 0.5s;
 }
