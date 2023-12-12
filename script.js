@@ -2,11 +2,20 @@ let firstNum = 0;
 let secondNum = 0;
 let operator = '';
 
-function operate(a, b, opp) {
+const numberButtons = document.querySelectorAll('#data-number');
+const operatorButtons = document.querySelectorAll('#data-operator');
+const clearButton = document.getElementById('clear-btn');
+const deleteButton = document.getElementById('delete-btn');
+const pointButton = document.getElementById('point-btn');
+const equalsButton = document.getElementById('equals-btn');
+const calculation = document.getElementsByClassName('calculation');
+const result = document.getElementsByClassName('.result');
+
+function operate(a, b, operator) {
     a = Number(a);
     b = Number(b);
 
-    switch(opp) {
+    switch(operator) {
         case '+':
             return add(a,b);
         case '-':
