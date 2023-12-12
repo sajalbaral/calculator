@@ -1,5 +1,5 @@
-let firstNum = 0;
-let secondNum = 0;
+let firstNum = '';
+let secondNum = '';
 let operator = '';
 
 const numberButtons = document.querySelectorAll('#data-number');
@@ -8,8 +8,26 @@ const clearButton = document.getElementById('clear-btn');
 const deleteButton = document.getElementById('delete-btn');
 const pointButton = document.getElementById('point-btn');
 const equalsButton = document.getElementById('equals-btn');
-const calculation = document.getElementsByClassName('calculation');
-const result = document.getElementsByClassName('.result');
+const lastCalc = document.getElementById('last-calc');
+const currentCalc = document.getElementById('current-calc');
+
+numberButtons.forEach((button) => 
+    button.addEventListener('click', () => appendNumber(button.textContent))
+)
+
+function appendNumber(number) {
+    currentCalc.innerText += number;
+}
+
+function clear() {
+    firstNum = ''
+    secondNum = ''
+    operator = ''
+    currentCalc.textContent = ''
+    lastCalc.textContent = ''
+}
+
+clearButton.addEventListener('click', clear)
 
 function operate(a, b, operator) {
     a = Number(a);
