@@ -26,8 +26,8 @@ function appendNumber(number) {
     currentCalc.innerText += number;
 }
 
-function appendOperator(oper){
-    currentCalc.innerText += oper;
+function appendOperator(operating){
+    currentCalc.innerText += operating;
 }
  
 function clear() {
