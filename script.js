@@ -38,6 +38,11 @@ function appendPoint() {
     if(currentCalc.textContent.includes('.')) return;
     currentCalc.textContent += '.'
 }
+
+function update() {
+    currentCalc.textContent = '';
+    updateScreen = false;
+}
  
 function clear() {
     firstNum = '';
@@ -65,11 +70,6 @@ function evaluate() {
     currentCalc.textContent = operate(currentOperator, firstNum, secondNum);
     lastCalc.textContent = `${firstNum} ${currentOperator} ${secondNum} =`;
     currentOperator = null;
-}
-
-function update() {
-    currentCalc.textContent = '';
-    updateScreen = false;
 }
 
 function setOperation(operator) {
