@@ -57,6 +57,10 @@ function deleted() {
 
 function evaluate() {
     if(currentOperator === null || updateScreen) return;
+    if(currentOperator === '÷' && currentCalc.textContent === '0') {
+        alert('nice try, you cannot divide by 0!');
+        return;
+    }
     secondNum = currentCalc.textContent;
     currentCalc.textContent = operate(currentOperator, firstNum, secondNum);
     lastCalc.textContent = `${firstNum} ${currentOperator} ${secondNum} =`;
@@ -88,14 +92,9 @@ function operate(operator, a , b) {
         case 'x':
             return multiply(a,b);
         case '÷':
-            if(b == 0) {
-                alert('Cannot divide by 0!')
-                clear()
-            } else {
                 return divide(a,b);
-            }
         default: 
-            return null;
+            return;
     }
 }
 
