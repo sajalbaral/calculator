@@ -25,7 +25,7 @@ operatorButtons.forEach((button) =>
 )
 
 function appendNumber(number) {
-    if(currentCalc.textContent === 0 || updateScreen) update()
+    if(currentCalc.textContent === '0' || updateScreen) update()
     currentCalc.innerText += number;
 }
  
@@ -49,8 +49,8 @@ function evaluate() {
     if(currentOperator === null || updateScreen) return
     secondNum = currentCalc.textContent
     currentCalc.textContent = operate(currentOperator, firstNum, secondNum)
-    lastCalc.textContent = `${firstNum} ${currentOperator} ${secondNum}`
-    currentOperator = ''
+    lastCalc.textContent = `${firstNum} ${currentOperator} ${secondNum} =`
+    currentOperator = null
 }
 
 function update() {
