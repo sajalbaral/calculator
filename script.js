@@ -48,7 +48,7 @@ function clear() {
     firstNum = '';
     secondNum = '';
     currentOperator = null;
-    currentCalc.textContent = '';
+    currentCalc.textContent = 0;
     lastCalc.textContent = '';
 }
 
