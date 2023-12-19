@@ -14,7 +14,6 @@ body {
     flex-direction: column;
     border: 2px solid black;
     width: 400px;
-    height: 550px;
     border-radius: 15px;
     margin: auto;
     padding: 20px;
@@ -24,12 +23,12 @@ body {
 .screen {
     border: 2px solid black;
     padding: 10px 20px;
-    width: 350px;
-    height: 150px;
     margin-bottom: 20px;
     border-radius: 5px;
     background-color: #FBEAEB;
-    text-align: end;
+    text-align: right;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 #last-calc {
@@ -41,7 +40,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 80px;
     font-size: 60px;
 }
 
